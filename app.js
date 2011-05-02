@@ -71,7 +71,7 @@ app.get('/', function(req, res) {
 app.post('/', function(req, res) {
     var name = req.body.name || '';
     client.collection(COLLECTION_NAME, function(err, collection) {
-        collection.insert({name: name, created: (new Date).getTime()}, function(err, result) {
+        collection.insert({name: name, created: new Date().getTime()}, function(err, result) {
             res.redirect('/');
         });
 
