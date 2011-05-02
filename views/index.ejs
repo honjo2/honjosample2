@@ -1,0 +1,10 @@
+MongoDBにinsertしたい文字列を入力してください<br/>
+<form method="POST" action="/">
+<input type="text" name="name" id="name" />
+<input type="submit" />
+</form>
+<br/>
+<% for (var i = 0; i < names.length; i++) { %>
+     <a href='/?remove=<%= names[i]._id %>'>削除</a>&nbsp;<%= names[i].name %>
+     <br/>
+<% } %>
