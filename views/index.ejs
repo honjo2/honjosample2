@@ -4,6 +4,10 @@ MongoDBにinsertしたい文字列を入力してください<br/>
 <input type="submit" />
 </form>
 <br/>
+<a href='/xml'>xml形式で一覧を表示する</a>
+<br/>
+<a href='/json'>json形式で一覧を表示する</a>
+<br/><br/>
 <% for (var i = 0; i < names.length; i++) { %>
      <a href='/?remove=<%= names[i]._id %>'>削除</a>&nbsp;<%= names[i].name %>
      <br/>
